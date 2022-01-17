@@ -1,0 +1,43 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-3">
+    <div class="d-flex justify-content-end mb-3">
+       
+       <!-- <a href="/addPost" class="btn btn-primary mx-3">Add New Customer</a>-->
+    </div>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>TranID</th>
+                    <th>Type</th>
+                    <th>Value</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#if isEmpty}}
+                <tr>
+                    <td colspan="3" class="bg-danger text-white ">No Transactions Yet</td>
+                </tr>
+                {{else}}
+                {{#each tranData}}
+                <tr>
+                    <td>{{this._id}}</td>
+                    <td>{{this.type}}</td>
+                    <td>{{this.value}}</td>
+                    <td>
+                        
+                        <a class="btn btn-danger " href="/DeleteTransation/{{this._id}}/{{../id}}">Delete</a>
+                        
+                    </td>
+                </tr>
+                {{/each}}
+
+                {{/if}}
+                
+            </tbody>
+        </table>
+    </div>
+</section>
+{{>footer}}

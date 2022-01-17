@@ -1,0 +1,33 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-3">
+    <div class="border border-3 border-primary p-4">
+        {{#if isNotFound}}
+            <div class="alert alert-danger">
+                customer not found
+            </div>        
+        {{else}}
+        <form method="post" >
+        <label for="add" class="my-2">Type of transaction</label>
+        <div class="btn-3">
+          <input type="radio" name="type" id="add" value="add" />
+          <label for="add">Add</label>
+          <input type="radio" name="type" id="withdraw" value="withdraw" />
+          <label for="withdraw">Withdraw</label>
+        </div>
+    
+        <div class="btn-3">
+          <label class="mt-4">Value</label>
+          <input name="value"  class="form-control w-25" type="number" placeholder="Enter your value" value="{{tran.value}}"/>
+          {{#if errors.value}}
+                <div class="text-danger"><span>{{errors.value}}</span></div>
+            {{/if}}
+        </div>
+        <div class="btn-3">
+          <button class="btn btn-primary my-3">Add</button>
+        </div>
+      </form>
+        {{/if}}
+    </div>
+</section>
+{{>footer}}

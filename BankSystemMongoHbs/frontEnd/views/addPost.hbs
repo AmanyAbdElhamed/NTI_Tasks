@@ -1,0 +1,44 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-3">
+    <h2>Add New Customers</h2>
+    <form method="post">
+        <div class="mb-3">
+            <input class="form-control" name="name" placeholder="Enter your name" value="{{customer.name}}">
+            {{#if errors.name}}
+                <div class="text-danger"><span>{{errors.name}}</span></div>
+            {{/if}}
+        </div>
+        
+        <div class="mb-3">
+            <input class="form-control" name="email" placeholder="Enter your email"  value="{{customer.email}}">
+            {{#if errors.email}}
+                <div class="text-danger"><span>{{errors.email}}</span></div>
+            {{/if}}
+            
+        </div>
+        <div class="mb-3">
+            <input class="form-control" name="address" placeholder="Enter your address"  value="{{customer.address}}">
+        {{#if errors.address}}
+            <div class="text-danger"><span>{{errors.address}}</span></div>
+        {{/if}}
+        </div>
+       
+        <div class="mb-3">
+            <input class="form-control" name="phone" placeholder="Enter your phone"  value="{{customer.phone}}">
+        {{#if errors.phone}}
+                <div class="text-danger"><span>{{errors.phone}}</span></div>
+         {{/if}}
+         </div>
+        <div class="mb-3">
+            <input class="form-control" name="intialBalance" placeholder="Enter your intial Balance"  value="{{customer.intialBalance}}">
+        {{#if errors.intialBalance}}
+                <div class="text-danger"><span>{{errors.intialBalance}}</span></div>
+         {{/if}}
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Add Data</button>
+        </div>
+    </form>
+</section>
+{{>footer}}

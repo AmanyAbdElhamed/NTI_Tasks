@@ -1,0 +1,29 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-3">
+    <div class="border border-3 border-primary p-4">
+        {{#if isNotFound}}
+        <div class="alert alert-danger">
+            customer not found
+        </div>
+        {{else}}
+        <h5>Name: {{customer.name}}</h5>
+        <h6>email: {{customer.email}}</h6>
+        <p>
+            address: {{customer.address}}
+        </p>
+        <h6>phone: {{customer.phone}}</h6>
+        <h6>Inaitial Balance :{{customer.intialBalance}}</h6>
+        <h6>
+            Transactions:{{#each customer.transactions}}</h6>
+             <h5>{{this.type}}</h5>
+              <h6>{{this.value}}</h6>
+           
+            {{/each}}
+
+
+        
+        {{/if}}
+    </div>
+</section>
+{{>footer}}

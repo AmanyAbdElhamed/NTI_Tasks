@@ -1,0 +1,26 @@
+{
+  "name": "banksystemhbs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "hbs": "^4.2.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmanyAbdElhamed/Bank.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AmanyAbdElhamed/Bank/issues"
+  },
+  "homepage": "https://github.com/AmanyAbdElhamed/Bank#readme",
+  "description": ""
+}
