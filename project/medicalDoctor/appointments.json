@@ -1,0 +1,72 @@
+{ 
+    "_id" : ObjectId("61f3257e6e1a1d8425f1ae1e"), 
+    "appointDate" : "2022-01-23", 
+    "doctor" : ObjectId("61f1b870e7d70d4aea3d7ef8"), 
+    "patient" : ObjectId("61f1ab95f0b8cfd8141c37e4"), 
+    "createdAt" : ISODate("2022-01-27T23:06:38.827+0000"), 
+    "updatedAt" : ISODate("2022-01-27T23:06:38.827+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("61f326f7a61d0251f3a14753"), 
+    "appointDate" : "2022-02-01", 
+    "doctor" : ObjectId("61f1b870e7d70d4aea3d7ef8"), 
+    "patient" : ObjectId("61f1ab95f0b8cfd8141c37e4"), 
+    "createdAt" : ISODate("2022-01-27T23:12:55.085+0000"), 
+    "updatedAt" : ISODate("2022-01-27T23:12:55.085+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("61f32760a61d0251f3a147fd"), 
+    "appointDate" : "2022-01-20", 
+    "doctor" : ObjectId("61f1b870e7d70d4aea3d7ef8"), 
+    "patient" : ObjectId("61f1ab95f0b8cfd8141c37e4"), 
+    "createdAt" : ISODate("2022-01-27T23:14:40.796+0000"), 
+    "updatedAt" : ISODate("2022-01-27T23:14:40.796+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("61f40a6a6ac1bede1d573770"), 
+    "appointDate" : "2022-01-25T21:09:27.369Z", 
+    "doctor" : ObjectId("61f1ac36f0b8cfd8141c37ed"), 
+    "patient" : ObjectId("61f1abc6f0b8cfd8141c37e6"), 
+    "createdAt" : ISODate("2022-01-28T15:23:22.318+0000"), 
+    "updatedAt" : ISODate("2022-01-28T15:23:22.318+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("61f40ac96ac1bede1d5737da"), 
+    "appointDate" : "2022-01-25T21:09:27.369Z", 
+    "doctor" : ObjectId("61f1b870e7d70d4aea3d7ef8"), 
+    "patient" : ObjectId("61f1abc6f0b8cfd8141c37e6"), 
+    "createdAt" : ISODate("2022-01-28T15:24:57.880+0000"), 
+    "updatedAt" : ISODate("2022-01-28T15:24:57.880+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("61f4ffb5e5b63abea7842e48"), 
+    "appointDate" : "2022-01-18", 
+    "doctor" : ObjectId("61f1ac36f0b8cfd8141c37ed"), 
+    "patient" : ObjectId("61f1abc6f0b8cfd8141c37e6"), 
+    "createdAt" : ISODate("2022-01-29T08:49:57.311+0000"), 
+    "updatedAt" : ISODate("2022-01-29T08:49:57.311+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("61f57f91bea4194d6136d988"), 
+    "appointDate" : "2022-01-30", 
+    "doctor" : ObjectId("61f1b870e7d70d4aea3d7ef8"), 
+    "patient" : ObjectId("61f1abc6f0b8cfd8141c37e6"), 
+    "createdAt" : ISODate("2022-01-29T17:55:30.001+0000"), 
+    "updatedAt" : ISODate("2022-01-29T17:55:30.001+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("61f6ec6ac8001cfd369d1d85"), 
+    "appointDate" : "2022-01-30", 
+    "doctor" : ObjectId("61f1ac36f0b8cfd8141c37ed"), 
+    "patient" : ObjectId("61f1abc6f0b8cfd8141c37e6"), 
+    "createdAt" : ISODate("2022-01-30T19:52:10.636+0000"), 
+    "updatedAt" : ISODate("2022-01-30T19:52:10.636+0000"), 
+    "__v" : NumberInt(0)
+}

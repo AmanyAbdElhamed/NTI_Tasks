@@ -1,0 +1,666 @@
+{
+	"info": {
+		"_postman_id": "a97140fa-d744-4819-b1c9-81182444deb7",
+		"name": "doctor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"amany\",\r\n    \"email\":\"amany1@gmail.com\",\r\n    \"password\":\"123456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/doc/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin  login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"Ahmed@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/doc/Adminlogin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"Adminlogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"amany@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/doc/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Apointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appointDate\":\"2022-01-25T21:09:27.369Z\",\r\n    \"user\":\"61f1abc6f0b8cfd8141c37e6\",\r\n    \"doctor\":\"61f1b870e7d70d4aea3d7ef8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/appoint/addApoint",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"appoint",
+						"addApoint"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myVAppoint",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxYjg3MGU3ZDcwZDRhZWEzZDdlZjgiLCJpYXQiOjE2NDMzMjM5MTR9.r86lxf0Ve_T69kaYG62vuacdjiIrwIhbgdFDvAuHqo0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/appoint/myVAppoint",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"appoint",
+						"myVAppoint"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Medical",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxYjg3MGU3ZDcwZDRhZWEzZDdlZjgiLCJpYXQiOjE2NDM0MTAwNzJ9.T7VTICqlqeNKn2Gkw5wtYUOSt4I4jIioV5-45fpScHQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"medical\":\"ii\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/appoint/AddMedical/61f1ab95f0b8cfd8141c37e4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"appoint",
+						"AddMedical",
+						"61f1ab95f0b8cfd8141c37e4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "my Medicals",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWViMjMxZWI0ZWY4ODE5ZjdlYTU1OWIiLCJpYXQiOjE2NDI4ODM3OTJ9.ZqLnLWxpnkqAwI_8ca8BYw5_yrre_EEhWTESikYaP5A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/doc/myMedicals",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"myMedicals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit My Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWViMjMxZWI0ZWY4ODE5ZjdlYTU1OWIiLCJpYXQiOjE2NDI4ODM3OTJ9.ZqLnLWxpnkqAwI_8ca8BYw5_yrre_EEhWTESikYaP5A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Hamza Mohmed Hamza\",\r\n    \"analysis\":\"oiu\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/doc/editMyProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"editMyProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin add Admin or doctor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU5Yzg4MmNhMTNhYjhlNDVkODkzODQiLCJpYXQiOjE2NDI3MTEzNzJ9.Oqgme3Qdfpp5r2DCLW48XQwHdp_VweK3Ec38PFUaAQU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"mohmed\",\r\n    \"email\":\"mohamed@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"userType\":\"Doctor\",\r\n    \"specialty\":\"qwe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/doc/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show all user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxYWJmZWYwYjhjZmQ4MTQxYzM3ZWEiLCJpYXQiOjE2NDMzMTk4MjF9.njyYICIyaYOrEpujJwepqfk3PN_-JGX-CxJg5yn2C1g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/doc/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU5Yzg4MmNhMTNhYjhlNDVkODkzODQiLCJpYXQiOjE2NDI3MTEzNzJ9.Oqgme3Qdfpp5r2DCLW48XQwHdp_VweK3Ec38PFUaAQU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/doc/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show single user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU5Yzg4MmNhMTNhYjhlNDVkODkzODQiLCJpYXQiOjE2NDI3MTEzNzJ9.Oqgme3Qdfpp5r2DCLW48XQwHdp_VweK3Ec38PFUaAQU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/doc/all/61eb231eb4ef8819f7ea559b",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"all",
+						"61eb231eb4ef8819f7ea559b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delet single user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU5Yzg4MmNhMTNhYjhlNDVkODkzODQiLCJpYXQiOjE2NDI3MTEzNzJ9.Oqgme3Qdfpp5r2DCLW48XQwHdp_VweK3Ec38PFUaAQU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/doc/all/61e9caba7bdbbf53d2df5cd4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"all",
+						"61e9caba7bdbbf53d2df5cd4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " show my Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/doc/myProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"myProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user change Pass",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWViMjMxZWI0ZWY4ODE5ZjdlYTU1OWIiLCJpYXQiOjE2NDI3OTk5Nzl9.9vSsubRA8nG-e3XmhqD6RuWkhtLeSHdCMeEW8vCnDKg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"oldPassword\":\"1234567\",\r\n    \"newPassword\":\"963258\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/doc/changePass",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"changePass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWViMjMxZWI0ZWY4ODE5ZjdlYTU1OWIiLCJpYXQiOjE2NDI4ODM3OTJ9.ZqLnLWxpnkqAwI_8ca8BYw5_yrre_EEhWTESikYaP5A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/doc/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin logout All user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU5Yzg4MmNhMTNhYjhlNDVkODkzODQiLCJpYXQiOjE2NDI3MTEzNzJ9.Oqgme3Qdfpp5r2DCLW48XQwHdp_VweK3Ec38PFUaAQU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/doc/logoutAll",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"logoutAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Mony/Desktop/logo.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/doc/UploadImage",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"UploadImage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user upload Analysis",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxYWJjNmYwYjhjZmQ4MTQxYzM3ZTYiLCJpYXQiOjE2NDMzNzk1MjB9.gjSwTicfPU_jgAHVBMIv9cR0B3FvMl57oeBVnSlL298",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Mony/Downloads/orca_share_media1624704447147_6814504361490047523 (2).pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/doc/uploadAnalysis",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"uploadAnalysis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allDoctor",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxYWMzNmYwYjhjZmQ4MTQxYzM3ZWQiLCJpYXQiOjE2NDMyMjgyNDR9.vGfcODXbxUmXz-3C8H4Zr2qT1aqS_r5r_YPCcVQz6v4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/doc/allDoctor",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"allDoctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myVdoctors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxYWJjNmYwYjhjZmQ4MTQxYzM3ZTYiLCJpYXQiOjE2NDM0MDIzMzB9.dMPIwBdt6hxjp3lf37wHsuwkgEtkXn8tqi4Io7yJuos",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/appoint/myVdoctors",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"appoint",
+						"myVdoctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "doctor login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mohmed@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/doc/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doc",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxYWJmZWYwYjhjZmQ4MTQxYzM3ZWEiLCJpYXQiOjE2NDMyMjkzNjZ9.yE9TAKhvGxxOGm3KSS4ynxRNHnfExGTopFCuZDURepM",
+			"type": "string"
+		}
+	]
+}
